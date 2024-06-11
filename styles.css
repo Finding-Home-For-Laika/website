@@ -1,21 +1,158 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  header, footer {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-  }
-  main {
-    padding: 20px;
-  }
-  h1, h2 {
-    color: #333;
-  }
-  a {
-    color: #007BFF;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff6347;
+}
+
+.main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+section#available-dogs {
+  background-color: #ffe600;
+  padding: 40px 20px;
+}
+
+section#available-dogs h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+}
+
+section#about {
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+section#about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+}
+
+section#about p {
+  font-size: 1.2em;
+}
+
+section#contact {
+  background-color: #ffe600;
+  padding: 40px 20px;
+}
+
+section#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+}
+
+section#contact p {
+  font-size: 1.2em;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.meet-the-mutts {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.meet-the-mutts h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+}
+
+.meet-the-mutts img {
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.meet-the-mutts button {
+  margin-top: 20px;
+}
+
+.banner {
+  background-color: #ffe600;
+  padding: 10px;
+  text-align: center;
+}
+
+.banner a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
