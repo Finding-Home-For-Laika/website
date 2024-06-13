@@ -4,36 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finding a Home for Laika</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to Finding a Home for Laika</h1>
+    <nav>
+      <div class="logo">Finding a Home for Laika</div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+      <ul class="nav-menu">
+        <li><a href="#available-dogs">Available Dogs</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#donate">Donate</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to Finding a Home for Laika</h1>
+        <p>Our mission is to find loving homes for dogs.</p>
+        <button class="button">Meet Them All</button>
+      </div>
+    </section>
     <section id="available-dogs">
       <h2>Available Dogs</h2>
       <div class="dog-gallery">
         <img src="assets/images/dog-1.png" alt="Dog 1">
         <img src="assets/images/dog-2.png" alt="Dog 2">
       </div>
-      <button class="button">Meet Them All</button>
     </section>
-
-    <section class="about" id="about">
+    <section id="about">
       <h2>About Us</h2>
       <p>Our mission is to find loving homes for dogs.</p>
     </section>
-
-    <section class="contact" id="contact">
+    <section id="contact">
       <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:emailpmejia@gmail.com">jimevf@gmail.com</a></p>
-      <!-- <p>Email: <a href="mailto:jimevf@gmail.com">jimevf@gmail.com</a></p> -->
+      <p>Email: <a href="mailto:jimevf@gmail.com">jimevf@gmail.com</a></p>
+    <section id="donate">
+      <h2>Donate</h2>
+      <p>Your donations help us save more dogs.</p>
+      <button class="button">Donate Now</button>
     </section>
-</main>
-<footer>
+  </main>
+  <footer>
     <p>&copy; 2024 Finding a Home for Laika</p>
   </footer>
-  <script src="js/scripts.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
