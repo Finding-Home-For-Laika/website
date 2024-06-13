@@ -91,10 +91,87 @@ section {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dog-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 footer {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    cursor: pointer;
+    background-color: #333;
+    width: 30px;
+    height: 2px;
+    position: relative;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label::before,
+  .nav-toggle-label::after {
+    content: '';
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+  }
+
+  .nav-toggle-label::before {
+    top: -8px;
+  }
+
+  .nav-toggle-label::after {
+    bottom: -8px;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 20px 30px;
+  }
+
+  .hero-section h1 {
+    font-size: 2em;
+  }
+
+  .hero-section p {
+    font-size: 1em;
+  }
 }
