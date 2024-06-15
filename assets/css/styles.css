@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #2e2e2e; /* Dark text color for all text */
+  color: #2e2e2e;
   scroll-behavior: smooth;
   background-color: #fdf7f1;
 }
@@ -22,14 +22,14 @@ body {
 }
 
 header {
-  background-color: #fff; /* Solid white background */
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 8px 16px; /* Reduced padding */
+  padding: 8px 16px;
   box-sizing: border-box;
 }
 
@@ -42,9 +42,9 @@ nav {
 }
 
 .logo {
-  font-size: 1.85em; /* Increased font size */
+  font-size: 1.85em;
   font-weight: bold;
-  color: #2e2e2e; /* Dark text color for consistency */
+  color: #2e2e2e;
 }
 
 .nav-menu {
@@ -55,14 +55,14 @@ nav {
 }
 
 .nav-menu li {
-  margin: 0 12px; /* Reduced margin */
+  margin: 0 12px;
 }
 
 .nav-menu li a {
   text-decoration: none;
-  color: #2e2e2e; /* Dark text color for all links */
+  color: #2e2e2e;
   font-weight: bold;
-  font-size: 1.3em; /* Increased font size */
+  font-size: 1.3em;
 }
 
 .nav-toggle-label {
@@ -72,10 +72,10 @@ nav {
 }
 
 .nav-toggle-label span {
-  height: 3.3px; /* Increased height */
-  width: 27.5px; /* Increased width */
+  height: 3.3px;
+  width: 27.5px;
   background-color: #2e2e2e;
-  margin: 3px 0; /* Reduced margin */
+  margin: 3px 0;
   transition: 0.4s;
 }
 
@@ -84,11 +84,11 @@ nav {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #fff; /* Solid white background */
+    background-color: #fff;
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 16px 0; /* Reduced padding */
+    padding: 16px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -97,7 +97,7 @@ nav {
   }
 
   .nav-menu li {
-    margin: 8px 0; /* Reduced margin */
+    margin: 8px 0;
     text-align: center;
   }
 
@@ -108,21 +108,21 @@ nav {
 
 .hero-section {
   text-align: center;
-  padding: 140px 16px 80px; /* Increased bottom padding for elegance */
-  background: #fff; /* Solid white background */
+  padding: 140px 16px 80px;
+  background: #fff;
   margin-top: 60px;
 }
 
 .hero-section h1 {
-  font-size: 2.95em; /* Increased font size */
-  margin-bottom: 16px; /* Reduced margin */
-  color: #2e2e2e; /* Dark text color for header */
+  font-size: 3.25em;
+  margin-bottom: 24px;
+  color: #2e2e2e;
 }
 
 .hero-section p {
-  font-size: 1.52em; /* Increased font size */
-  margin-bottom: 24px; /* Reduced margin */
-  color: #2e2e2e; /* Dark text color for paragraph */
+  font-size: 1.75em;
+  margin-bottom: 32px;
+  color: #2e2e2e;
 }
 
 .about-section,
@@ -130,10 +130,9 @@ nav {
 .donate-section,
 .dogs-section {
   text-align: center;
-  padding: 120px 16px; /* Increased padding for more space */
+  padding: 140px 16px;
   background-size: cover;
   background-attachment: fixed;
-  margin-bottom: 40px; /* Added bottom margin for spacing */
 }
 
 .about-section {
@@ -149,18 +148,19 @@ nav {
 }
 
 .dogs-section {
-  background: url('../images/donate-background.png') no-repeat center center fixed;
+  background-color: #f0e6d6;
+  margin-bottom: 40px;
 }
 
 .dog-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px; /* Reduced gap */
+  gap: 32px;
 }
 
 .dog-card {
-  background: #fff; /* Solid white background */
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -173,11 +173,11 @@ nav {
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 16px; /* Reduced margin */
+  margin-bottom: 16px;
 }
 
 .dog-description {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #2e2e2e;
 }
 
@@ -188,105 +188,105 @@ nav {
 }
 
 .section-content {
-  background: #fff; /* Solid white background */
-  padding: 40px; /* Reduced padding */
+  background: #fff;
+  padding: 40px;
   border-radius: 10px;
   display: inline-block;
 }
 
 .section-content h2 {
-  font-size: 2.4em; /* Increased font size */
-  margin-bottom: 16px; /* Reduced margin */
-  color: #2e2e2e; /* Dark text color for section headers */
+  font-size: 2.6em;
+  margin-bottom: 24px;
+  color: #2e2e2e;
 }
 
 .button,
 .email-button {
   display: inline-block;
-  padding: 8px 16px; /* Reduced padding */
-  font-size: 1.465em; /* Increased font size */
+  padding: 12px 24px;
+  font-size: 1.5em;
   font-weight: lighter;
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  margin-top: 8px; /* Reduced space */
-  text-align: center; /* Center text */
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 16px;
+  text-align: center;
   cursor: pointer;
   border: none;
 }
 
 .button {
-  color: #fff; /* White text color for contrast */
-  background-color: #d2b48c; /* Dark yellow background for consistency */
+  color: #fff;
+  background-color: #d2b48c;
 }
 
 .button:hover {
-  background-color: #b38e6a; /* Darker shade for hover effect */
+  background-color: #b38e6a;
 }
 
 .email-button {
-  color: #000; /* Black text color for higher contrast */
-  background-color: #f5f5f5; /* Light grey background for higher contrast */
+  color: #000;
+  background-color: #f5f5f5;
 }
 
 .email-button a {
-  color: #d2b48c; /* Dark yellow color for email links to match the site's style */
-  text-decoration: none; /* Remove underline */
+  color: #d2b48c;
+  text-decoration: none;
 }
 
 .email-button a:hover {
-  text-decoration: underline; /* Underline on hover for better visibility */
+  text-decoration: underline;
 }
 
 .email-button:hover {
-  background-color: #e0e0e0; /* Slightly darker shade for hover effect */
+  background-color: #e0e0e0;
 }
 
 footer {
-  background-color: #fff; /* Solid white background */
-  padding: 16px; /* Reduced padding */
+  background-color: #fff;
+  padding: 32px;
   text-align: center;
-  color: #2e2e2e; /* Dark text color for footer */
+  color: #2e2e2e;
 }
 
 @media (max-width: 1024px) {
   .button,
   .email-button {
-    font-size: 1.52em; /* Increased font size */
+    font-size: 1.6em;
   }
 
   .about-section,
   .contact-section,
   .donate-section,
   .dogs-section {
-    background-size: contain; /* Adjust background size for larger screens */
-    padding: 90px 36px; /* Reduced padding for larger screens */
+    background-size: contain;
+    padding: 100px 36px;
   }
 
   .hero-section {
-    padding: 180px 36px; /* Reduced padding for larger screens */
+    padding: 200px 36px;
   }
 }
 
 @media (max-width: 768px) {
   .button,
   .email-button {
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.4em;
   }
 
   .about-section,
   .contact-section,
   .donate-section,
   .dogs-section {
-    background-size: contain; /* Adjust background size for medium screens */
-    padding: 70px 16px; /* Reduced padding for medium screens */
+    background-size: contain;
+    padding: 80px 16px;
   }
 
   .hero-section {
-    padding: 140px 16px; /* Reduced padding for medium screens */
+    padding: 160px 16px;
   }
 
   .dog-images {
-    flex-direction: column; /* Stack images vertically on medium screens */
+    flex-direction: column;
   }
 
   .dog-card {
@@ -300,35 +300,45 @@ footer {
   }
 
   .hero-section {
-    padding: 70px 16px 16px; /* Reduced padding */
+    padding: 80px 16px 16px;
   }
 
   .hero-section h1 {
-    font-size: 2.18em; /* Increased font size */
+    font-size: 2.2em;
   }
 
   .hero-section p {
-    font-size: 1.19em; /* Increased font size */
+    font-size: 1.2em;
   }
 
   .button,
   .email-button {
-    font-size: 1.19em; /* Increased font size */
+    font-size: 1.2em;
   }
 
   .about-section,
   .contact-section,
   .donate-section,
   .dogs-section {
-    background-size: contain; /* Adjust background size for smaller screens */
-    padding: 50px 8px; /* Reduced padding for smaller screens */
+    background-size: contain;
+    padding: 60px 8px;
   }
 
   .dog-images {
-    flex-direction: column; /* Stack images vertically on small screens */
+    flex-direction: column;
   }
 
   .dog-card {
     max-width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dog-image {
+    margin-bottom: 8px;
+  }
+
+  .dog-description {
+    font-size: 1em;
   }
 }
