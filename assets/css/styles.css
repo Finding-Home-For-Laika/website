@@ -22,14 +22,14 @@ body {
 }
 
 header {
-  background-color: #fff;
+  background-color: #fff; /* Solid white background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding */
   box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@ nav {
 }
 
 .nav-menu li {
-  margin: 0 15px;
+  margin: 0 12px; /* Reduced margin */
 }
 
 .nav-menu li a {
@@ -75,7 +75,7 @@ nav {
   height: 3.3px; /* Increased height */
   width: 27.5px; /* Increased width */
   background-color: #2e2e2e;
-  margin: 4px 0;
+  margin: 3px 0; /* Reduced margin */
   transition: 0.4s;
 }
 
@@ -84,11 +84,11 @@ nav {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
+    background-color: #fff; /* Solid white background */
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 20px 0;
+    padding: 16px 0; /* Reduced padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -97,7 +97,7 @@ nav {
   }
 
   .nav-menu li {
-    margin: 10px 0;
+    margin: 8px 0; /* Reduced margin */
     text-align: center;
   }
 
@@ -108,30 +108,32 @@ nav {
 
 .hero-section {
   text-align: center;
-  padding: 150px 20px 50px;
-  background: #fff;
+  padding: 140px 16px 80px; /* Increased bottom padding for elegance */
+  background: #fff; /* Solid white background */
   margin-top: 60px;
 }
 
 .hero-section h1 {
   font-size: 2.95em; /* Increased font size */
-  margin-bottom: 20px;
+  margin-bottom: 16px; /* Reduced margin */
   color: #2e2e2e; /* Dark text color for header */
 }
 
 .hero-section p {
   font-size: 1.52em; /* Increased font size */
-  margin-bottom: 30px;
+  margin-bottom: 24px; /* Reduced margin */
   color: #2e2e2e; /* Dark text color for paragraph */
 }
 
 .about-section,
 .contact-section,
-.donate-section {
+.donate-section,
+.dogs-section {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 16px; /* Increased padding for more space */
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: 40px; /* Added bottom margin for spacing */
 }
 
 .about-section {
@@ -147,15 +149,23 @@ nav {
 }
 
 .dogs-section {
-  padding: 100px 20px;
-  text-align: center;
-  background: #fdf7f1;
+  background: url('../images/donate-background.png') no-repeat center center fixed;
 }
 
 .dog-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 16px; /* Reduced gap */
+}
+
+.dog-card {
+  background: #fff; /* Solid white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
 }
 
 .dog-image {
@@ -163,6 +173,12 @@ nav {
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 16px; /* Reduced margin */
+}
+
+.dog-description {
+  font-size: 1em;
+  color: #2e2e2e;
 }
 
 .dog-image.expanded {
@@ -172,27 +188,27 @@ nav {
 }
 
 .section-content {
-  background: #fff;
-  padding: 50px;
+  background: #fff; /* Solid white background */
+  padding: 40px; /* Reduced padding */
   border-radius: 10px;
   display: inline-block;
 }
 
 .section-content h2 {
   font-size: 2.4em; /* Increased font size */
-  margin-bottom: 20px;
+  margin-bottom: 16px; /* Reduced margin */
   color: #2e2e2e; /* Dark text color for section headers */
 }
 
 .button,
 .email-button {
   display: inline-block;
-  padding: 10px 20px; /* Padding for button-like appearance */
+  padding: 8px 16px; /* Reduced padding */
   font-size: 1.465em; /* Increased font size */
   font-weight: lighter;
   border-radius: 5px; /* Rounded corners */
   text-decoration: none; /* Remove underline */
-  margin-top: 10px; /* Space around the button */
+  margin-top: 8px; /* Reduced space */
   text-align: center; /* Center text */
   cursor: pointer;
   border: none;
@@ -226,8 +242,8 @@ nav {
 }
 
 footer {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #fff; /* Solid white background */
+  padding: 16px; /* Reduced padding */
   text-align: center;
   color: #2e2e2e; /* Dark text color for footer */
 }
@@ -243,11 +259,11 @@ footer {
   .donate-section,
   .dogs-section {
     background-size: contain; /* Adjust background size for larger screens */
-    padding: 100px 40px; /* Increase padding for larger screens */
+    padding: 90px 36px; /* Reduced padding for larger screens */
   }
 
   .hero-section {
-    padding: 200px 40px; /* Increase padding for larger screens */
+    padding: 180px 36px; /* Reduced padding for larger screens */
   }
 }
 
@@ -262,11 +278,19 @@ footer {
   .donate-section,
   .dogs-section {
     background-size: contain; /* Adjust background size for medium screens */
-    padding: 80px 20px; /* Adjust padding for medium screens */
+    padding: 70px 16px; /* Reduced padding for medium screens */
   }
 
   .hero-section {
-    padding: 150px 20px; /* Adjust padding for medium screens */
+    padding: 140px 16px; /* Reduced padding for medium screens */
+  }
+
+  .dog-images {
+    flex-direction: column; /* Stack images vertically on medium screens */
+  }
+
+  .dog-card {
+    max-width: 100%;
   }
 }
 
@@ -276,7 +300,7 @@ footer {
   }
 
   .hero-section {
-    padding: 80px 20px 20px;
+    padding: 70px 16px 16px; /* Reduced padding */
   }
 
   .hero-section h1 {
@@ -297,6 +321,14 @@ footer {
   .donate-section,
   .dogs-section {
     background-size: contain; /* Adjust background size for smaller screens */
-    padding: 60px 10px; /* Adjust padding for smaller screens */
+    padding: 50px 8px; /* Reduced padding for smaller screens */
+  }
+
+  .dog-images {
+    flex-direction: column; /* Stack images vertically on small screens */
+  }
+
+  .dog-card {
+    max-width: 100%;
   }
 }
