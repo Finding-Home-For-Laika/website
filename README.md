@@ -7,23 +7,23 @@
 Following best practices, here is the recommended directory structure for your GitHub Pages website:
 
 ```
-finding-home-for-laika/
-├── .github/                  # GitHub specific files (like workflows for CI/CD)
-│   └── workflows/            # GitHub Actions workflows
-├── assets/                   # Directory for images, videos, and other static assets
-│   ├── images/               # Directory for images
-│   ├── videos/               # Directory for videos
-│   └── css/                  # Directory for CSS files
-├── js/                       # Directory for JavaScript files
-├── pages/                    # Directory for additional HTML pages
-│   ├── about.html            # About Us page
-│   ├── available-dogs.html   # Available Dogs page
-│   └── contact.html          # Contact Us page
-├── index.html                # Main HTML file
-├── styles.css                # Main CSS file
-├── CNAME                     # Custom domain configuration file
-├── README.md                 # Project documentation
-└── .gitignore                # Git ignore file
+.
+├── index.html
+├── about.html
+├── contact.html
+├── available-dogs.html
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   ├── images
+│   │   ├── background1.png
+│   │   ├── dog-1.png
+│   │   ├── dog-2.png
+│   └── js
+│       └── scripts.js
+├── README.md
+└── LICENSE
+
 ```
 
 # Finding a Home for Laika

@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finding a Home for Laika</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <div class="background-overlay"></div>
   <header>
     <nav>
       <div class="logo">Finding a Home for Laika</div>
-      <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle"> -->
-      <label for="nav-toggle" class="nav-toggle-label">
+      <div class="nav-toggle-label" id="nav-toggle-label">
         <span></span>
-      </label>
-      <ul class="nav-menu">
-        <li><a href="#available-dogs">Available Dogs</a></li>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#dogs">Dogs</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#donate">Donate</a></li>
       </ul>
@@ -28,30 +30,36 @@
       <div class="hero-content">
         <h1>Welcome to Finding a Home for Laika</h1>
         <p>Our mission is to find loving homes for dogs.</p>
-        <button class="button">Meet Them All</button>
+        <a href="#about" class="button">Meet Them All</a>
       </div>
     </section>
-    <section id="available-dogs">
-      <h2>Available Dogs</h2>
-      <div class="dog-gallery">
-        <img src="assets/images/dog-1.png" alt="Dog 1" class="dog-image">
-        <img src="assets/images/dog-1.png" alt="Dog 1" class="dog-image">
-        <img src="assets/images/dog-2.png" alt="Dog 2" class="dog-image">
-        <img src="assets/images/dog-2.png" alt="Dog 2" class="dog-image">
+    <section id="about" class="about-section">
+      <div class="section-content">
+        <h2>About Us</h2>
+        <p>Our mission is to find loving homes for dogs.</p>
       </div>
     </section>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Our mission is to find loving homes for dogs.</p>
+    <section id="dogs" class="dogs-section">
+      <div class="section-content">
+        <h2>Meet Our Dogs</h2>
+        <div class="dog-images">
+          <img src="assets/images/dog-1.png" alt="Dog 1" class="dog-image" id="dog-1">
+          <img src="assets/images/dog-2.png" alt="Dog 2" class="dog-image" id="dog-2">
+        </div>
+      </div>
     </section>
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:jimevf@gmail.com">jimevf@gmail.com</a></p>
+    <section id="contact" class="contact-section">
+      <div class="section-content">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:jimevf@gmail.com" class="email-button">jimevf@gmail.com</a></p>
+      </div>
     </section>
-    <section id="donate">
-      <h2>Donate</h2>
-      <p>Your donations help us save more dogs.</p>
-      <button class="button">Donate Now</button>
+    <section id="donate" class="donate-section">
+      <div class="section-content">
+        <h2>Donate</h2>
+        <p>Your donations help us save more dogs.</p>
+        <a href="#" class="button">Donate Now</a>
+      </div>
     </section>
   </main>
   <footer>
