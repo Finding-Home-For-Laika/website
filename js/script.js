@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll(".dog-image");
+  const navToggleLabel = document.getElementById("nav-toggle-label");
+  const navMenu = document.getElementById("nav-menu");
 
   images.forEach(image => {
     image.addEventListener("click", function() {
@@ -10,5 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList.add("expanded");
       }
     });
+  });
+
+  navToggleLabel.addEventListener("click", function() {
+    navMenu.classList.toggle("active");
   });
 });
