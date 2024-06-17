@@ -1,35 +1,45 @@
-# website
-"Finding a Home for Laika" is a dedicated platform that helps find loving and permanent homes for dogs. Our mission is to connect dogs with compassionate families, providing all the necessary information and resources to ensure a smooth adoption process.
+# Finding a Home for Laika
 
+Website: [https://finding-home-for-laika.github.io/website/](https://finding-home-for-laika.github.io/website/)
+
+"Finding a Home for Laika" is a dedicated platform that helps find loving and permanent homes for dogs. Our mission is to connect dogs with compassionate families, providing all the necessary information and resources to ensure a smooth adoption process.
 
 ### Directory Structure for "Finding a Home for Laika" Website
 
 Following best practices, here is the recommended directory structure for your GitHub Pages website:
 
-```
+```bash
 .
-├── index.html
-├── about.html
-├── contact.html
-├── available-dogs.html
+├── LICENSE
+├── README.md
 ├── assets
 │   ├── css
 │   │   └── styles.css
 │   ├── images
-│   │   ├── background1.png
+│   │   ├── blue-background.png
 │   │   ├── dog-1.png
 │   │   ├── dog-2.png
-│   └── js
-│       └── scripts.js
-├── README.md
-└── LICENSE
+│   │   └── yellow-background.png
+│   └── videos
+│       └── dog-movie.mov
+├── index.html
+├── js
+│   └── script.js
+└── pages
+    ├── about.html
+    ├── contact.html
+    ├── dogs.html
+    └── donate.html
 
+7 directories, 14 files
 ```
 
 # Finding a Home for Laika
 
 ## Overview
 "Finding a Home for Laika" is a website dedicated to finding loving homes for dogs. This project leverages GitHub Pages for hosting and GitHub Actions for continuous deployment.
+
+Website: [https://finding-home-for-laika.github.io/website/](https://finding-home-for-laika.github.io/website/)
 
 ## Setup Instructions
 
