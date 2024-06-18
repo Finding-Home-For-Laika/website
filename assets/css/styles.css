@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap');
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -118,6 +118,7 @@ nav {
 .hero-section h1 {
   font-size: 3.25em;
   margin-bottom: 24px;
+  font-family: 'Rock Salt', cursive;
 }
 
 .hero-section p {
@@ -159,9 +160,8 @@ nav {
 
 .dog-card {
   background: #fff;
-  padding: 20px;
+  padding: 0;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
 }
@@ -172,6 +172,13 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 16px;
+  box-shadow: none; /* Remove the border box */
+}
+
+.dog-image.expanded {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
 }
 
 .dog-description {
@@ -179,10 +186,12 @@ nav {
   color: #2e2e2e;
 }
 
-.dog-image.expanded {
-  transform: scale(1.5);
-  z-index: 10;
-  position: relative;
+.dog-card:nth-child(odd) .dog-image {
+  transform: rotate(-2deg); /* Add slight asymmetry */
+}
+
+.dog-card:nth-child(even) .dog-image {
+  transform: rotate(2deg); /* Add slight asymmetry */
 }
 
 .section-content {
