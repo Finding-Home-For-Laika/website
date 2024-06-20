@@ -112,7 +112,7 @@ nav {
   padding: 160px 16px;
   background: url('../images/blue-background.png') no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: #2e2e2e;
 }
 
 .hero-section h1 {
@@ -130,16 +130,17 @@ nav {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.5em;
-  font-weight: lighter;
+  font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
-  background-color: #d2b48c;
+  background-color: #ff6347; /* Vivid color for better standout */
   cursor: pointer;
+  width: auto; /* Make button size flexible */
 }
 
 .button:hover {
-  background-color: #b38e6a;
+  background-color: #e05241; /* Slightly darker shade on hover */
 }
 
 .about-section,
@@ -156,6 +157,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
+  margin-top: 40px;
 }
 
 .dog-card {
@@ -164,6 +166,16 @@ nav {
   border-radius: 10px;
   max-width: 300px;
   text-align: center;
+  position: relative;
+  top: 0; /* Reset initial position */
+}
+
+.dog-card:nth-child(odd) {
+  top: -20px; /* Slightly higher */
+}
+
+.dog-card:nth-child(even) {
+  top: 20px; /* Slightly lower */
 }
 
 .dog-image {
@@ -186,14 +198,6 @@ nav {
   color: #2e2e2e;
 }
 
-.dog-card:nth-child(odd) .dog-image {
-  transform: rotate(-2deg); /* Add slight asymmetry */
-}
-
-.dog-card:nth-child(even) .dog-image {
-  transform: rotate(2deg); /* Add slight asymmetry */
-}
-
 .section-content {
   padding: 40px;
   display: inline-block;
@@ -203,13 +207,14 @@ nav {
   font-size: 2.6em;
   margin-bottom: 24px;
   color: #2e2e2e;
+  font-family: 'Rock Salt', cursive;
 }
 
 .email-button {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.5em;
-  font-weight: lighter;
+  font-weight: 
   border-radius: 5px;
   text-decoration: none;
   color: #000;
@@ -226,4 +231,36 @@ footer {
   padding: 32px;
   text-align: center;
   color: #2e2e2e;
+}
+
+/* Updated CSS for responsive dog images */
+.dog-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-section p {
+    font-size: 1.25em;
+  }
+
+  .button {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+
+  .dog-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dog-card:nth-child(odd), .dog-card:nth-child(even) {
+    top: 0; /* Remove vertical adjustment on smaller screens */
+  }
 }
