@@ -110,7 +110,7 @@ nav {
 .hero-section {
   text-align: center;
   padding: 160px 16px;
-  background: url('../images/blue-background.png') no-repeat center center;
+  background: url('../images/backgrounds/3d-whitepaper-background.png') no-repeat center center;
   background-size: cover;
   color: #2e2e2e;
 }
@@ -150,6 +150,10 @@ nav {
   text-align: center;
   padding: 140px 16px;
   background: #fff;
+}
+
+.contact-section {
+background: url('../images/backgrounds/3d-whitepaper-background.png') no-repeat center center;
 }
 
 .dog-images {
