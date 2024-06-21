@@ -20,14 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggleLabel.classList.toggle('active');
   });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!navToggleLabel.contains(event.target) && !navMenu.contains(event.target)) {
-      navMenu.classList.remove('active');
-      navToggleLabel.classList.remove('active');
-    }
-  });
-
   // Close menu when clicking a menu item
   const navLinks = document.querySelectorAll('.nav-menu li a');
   navLinks.forEach(link => {
@@ -35,5 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
       navMenu.classList.remove('active');
       navToggleLabel.classList.remove('active');
     });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!navToggleLabel.contains(event.target) && !navMenu.contains(event.target)) {
+      navMenu.classList.remove('active');
+      navToggleLabel.classList.remove('active');
+    }
   });
 });

@@ -152,9 +152,6 @@ nav {
   background: #fff;
 }
 
-.contact-section {
-background: url('../images/backgrounds/3d-whitepaper-background.png') no-repeat center center;
-}
 
 .dog-images {
   display: flex;
@@ -218,7 +215,7 @@ background: url('../images/backgrounds/3d-whitepaper-background.png') no-repeat 
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.5em;
-  font-weight: 
+  font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
   color: #000;
@@ -235,6 +232,17 @@ footer {
   padding: 32px;
   text-align: center;
   color: #2e2e2e;
+  position: relative;
+}
+
+.end-of-website-background {
+  background: url('../images/backgrounds/end-of-website-background.png') no-repeat center bottom;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* Updated CSS for responsive dog images */
@@ -266,5 +274,11 @@ footer {
 
   .dog-card:nth-child(odd), .dog-card:nth-child(even) {
     top: 0; /* Remove vertical adjustment on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .end-of-website-background {
+    height: 100px;
   }
 }
