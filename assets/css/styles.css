@@ -31,9 +31,23 @@ nav {
 }
 
 .logo {
-  font-size: 1.85em;
-  font-weight: bold;
-  color: #2e2e2e;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.nav-logo {
+  height: auto;
+  width: auto;
+  max-height: 50px;
+}
+
+.favicon-mask {
+  border-radius: 50%;
 }
 
 .nav-menu {
@@ -110,7 +124,6 @@ nav {
 .hero-section {
   text-align: center;
   padding: 160px 16px;
-  background: url('../images/backgrounds/3d-whitepaper-background.png') no-repeat center center;
   background-size: cover;
   color: #2e2e2e;
 }
@@ -134,13 +147,13 @@ nav {
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
-  background-color: #ff6347; /* Vivid color for better standout */
+  background-color: #ff6347;
   cursor: pointer;
-  width: auto; /* Make button size flexible */
+  width: auto;
 }
 
 .button:hover {
-  background-color: #e05241; /* Slightly darker shade on hover */
+  background-color: #e05241;
 }
 
 .about-section,
@@ -152,6 +165,13 @@ nav {
   background: #fff;
 }
 
+.contact-section {
+}
+
+.about-section {
+  background: url('../images/backgrounds/website-background-5.png') no-repeat center bottom;
+  background-size: cover;
+}
 
 .dog-images {
   display: flex;
@@ -168,15 +188,15 @@ nav {
   max-width: 300px;
   text-align: center;
   position: relative;
-  top: 0; /* Reset initial position */
+  top: 0;
 }
 
 .dog-card:nth-child(odd) {
-  top: -20px; /* Slightly higher */
+  top: -20px;
 }
 
 .dog-card:nth-child(even) {
-  top: 20px; /* Slightly lower */
+  top: 20px;
 }
 
 .dog-image {
@@ -185,7 +205,7 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 16px;
-  box-shadow: none; /* Remove the border box */
+  box-shadow: none;
 }
 
 .dog-image.expanded {
@@ -218,13 +238,13 @@ nav {
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
-  color: #000;
-  background-color: #f5f5f5;
+  color: #fff;
+  background-color: #5970cb;
   cursor: pointer;
 }
 
 .email-button:hover {
-  background-color: #e0e0e0;
+  background-color: #4758a0;
 }
 
 footer {
@@ -236,21 +256,13 @@ footer {
 }
 
 .end-of-website-background {
-  background: url('../images/backgrounds/end-of-website-background.png') no-repeat center bottom;
+  background: url('../images/backgrounds/website-background-4.png') no-repeat center bottom;
   background-size: cover;
   height: 200px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-/* Updated CSS for responsive dog images */
-.dog-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
 }
 
 @media (max-width: 768px) {
@@ -264,7 +276,7 @@ footer {
 
   .button {
     width: 100%;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
   }
 
   .dog-images {
@@ -272,12 +284,15 @@ footer {
     align-items: center;
   }
 
-  .dog-card:nth-child(odd), .dog-card:nth-child(even) {
-    top: 0; /* Remove vertical adjustment on smaller screens */
+  .dog-card:nth-child(odd),
+  .dog-card:nth-child(even) {
+    top: 0;
   }
-}
 
-@media (max-width: 768px) {
+  .nav-logo {
+    max-height: 40px;
+  }
+
   .end-of-website-background {
     height: 100px;
   }
