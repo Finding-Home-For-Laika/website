@@ -5,7 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finding a Home for Laika</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" href="assets/images/logos/logo-1-rounded.png" type="image/x-icon" class="favicon-mask">
+  <link rel="icon" href="assets/images/logos/favicon_rounded.png" type="image/png">
+  <style>
+    /* Critical CSS */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #2e2e2e;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 8px 16px;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -47,23 +69,23 @@
         <h2>Meet Our Dogs</h2>
         <div class="dog-images">
           <div class="dog-card">
-            <img src="assets/images/dogs/dog-1.png" alt="Baxter" class="dog-image" id="dog-1">
+            <img src="assets/images/dogs/dog-1.png" srcset="assets/images/dogs/dog-1-320w.png 320w, assets/images/dogs/dog-1-480w.png 480w, assets/images/dogs/dog-1-800w.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Baxter" class="dog-image" loading="lazy">
             <p class="dog-description">Baxter is a playful and loving dog looking for a forever home.</p>
           </div>
           <div class="dog-card">
-            <img src="assets/images/dogs/dog-2.png" alt="Charlie" class="dog-image" id="dog-2">
+            <img src="assets/images/dogs/dog-2.png" srcset="assets/images/dogs/dog-2-320w.png 320w, assets/images/dogs/dog-2-480w.png 480w, assets/images/dogs/dog-2-800w.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Charlie" class="dog-image" loading="lazy">
             <p class="dog-description">Charlie is a friendly and sleepy dog waiting for a loving family.</p>
           </div>
           <div class="dog-card">
-            <img src="assets/images/dogs/dog-3.png" alt="Luna" class="dog-image" id="dog-3">
+            <img src="assets/images/dogs/dog-3.png" srcset="assets/images/dogs/dog-3-320w.png 320w, assets/images/dogs/dog-3-480w.png 480w, assets/images/dogs/dog-3-800w.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Luna" class="dog-image" loading="lazy">
             <p class="dog-description">Luna is a curious and energetic pup ready to explore a new home.</p>
           </div>
           <div class="dog-card">
-            <img src="assets/images/dogs/dog-4.png" alt="Max" class="dog-image" id="dog-4">
+            <img src="assets/images/dogs/dog-4.png" srcset="assets/images/dogs/dog-4-320w.png 320w, assets/images/dogs/dog-4-480w.png 480w, assets/images/dogs/dog-4-800w.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Max" class="dog-image" loading="lazy">
             <p class="dog-description">Max is a gentle and thoughtful companion seeking a warm place to stay.</p>
           </div>
           <div class="dog-card">
-            <img src="assets/images/dogs/dog-5.png" alt="Max" class="dog-image" id="dog-5">
+            <img src="assets/images/dogs/dog-5.png" srcset="assets/images/dogs/dog-5-320w.png 320w, assets/images/dogs/dog-5-480w.png 480w, assets/images/dogs/dog-5-800w.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Max" class="dog-image" loading="lazy">
             <p class="dog-description">Max is a gentle and thoughtful companion seeking a warm place to stay.</p>
           </div>
         </div>
@@ -88,6 +110,6 @@
   <footer>
     <p>&copy; 2024 Finding a Home for Laika</p>
   </footer>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js" async></script>
 </body>
 </html>

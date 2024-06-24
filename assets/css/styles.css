@@ -38,6 +38,7 @@ nav {
 .logo img {
   max-width: 40px;
   margin-right: 10px;
+  border-radius: 100%;
 }
 
 .nav-logo {
@@ -124,7 +125,7 @@ nav {
 .hero-section {
   text-align: center;
   padding: 160px 16px;
-  background-size: cover; /* Cover is correct here */
+  background-size: cover;
   color: #2e2e2e;
 }
 
@@ -171,18 +172,18 @@ nav {
 }
 
 .contact-section {
-  background-size: contain; /* Make sure this is intentional and correct */
+  background-size: contain;
 }
 
 .donate-section {
   background: url('../images/backgrounds/website-background-6.png') no-repeat center bottom;
-  background-size: cover; /* Cover is correct here */
+  background-size: cover;
   padding-bottom: 320px;
 }
 
 .about-section {
   background: url('../images/backgrounds/website-background-5.png') no-repeat center bottom;
-  background-size: cover; /* Cover is correct here */
+  background-size: cover;
   padding-bottom: 320px;
 }
 
@@ -268,7 +269,7 @@ footer {
 
 .end-of-website-background {
   background: url('../images/backgrounds/website-background-4.png') no-repeat center bottom;
-  background-size: cover; /* Cover is correct here */
+  background-size: cover;
   height: 200px;
   width: 100%;
   position: absolute;
