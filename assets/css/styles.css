@@ -124,8 +124,13 @@ nav {
 .hero-section {
   text-align: center;
   padding: 160px 16px;
-  background-size: cover;
+  background-size: cover; /* Cover is correct here */
   color: #2e2e2e;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-section h1 {
@@ -166,11 +171,19 @@ nav {
 }
 
 .contact-section {
+  background-size: contain; /* Make sure this is intentional and correct */
+}
+
+.donate-section {
+  background: url('../images/backgrounds/website-background-6.png') no-repeat center bottom;
+  background-size: cover; /* Cover is correct here */
+  padding-bottom: 320px;
 }
 
 .about-section {
   background: url('../images/backgrounds/website-background-5.png') no-repeat center bottom;
-  background-size: cover;
+  background-size: cover; /* Cover is correct here */
+  padding-bottom: 320px;
 }
 
 .dog-images {
@@ -187,8 +200,6 @@ nav {
   border-radius: 10px;
   max-width: 300px;
   text-align: center;
-  position: relative;
-  top: 0;
 }
 
 .dog-card:nth-child(odd) {
@@ -257,7 +268,7 @@ footer {
 
 .end-of-website-background {
   background: url('../images/backgrounds/website-background-4.png') no-repeat center bottom;
-  background-size: cover;
+  background-size: cover; /* Cover is correct here */
   height: 200px;
   width: 100%;
   position: absolute;
