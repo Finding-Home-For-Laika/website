@@ -1,6 +1,6 @@
+/* Updated CSS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap');
 
-/* Variables for colors */
 :root {
   --primary-color: #ff6347;
   --secondary-color: #5970cb;
@@ -10,7 +10,6 @@
   --highlight-color: #ff6347;
 }
 
-/* Base styles */
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
@@ -31,14 +30,12 @@ header {
   z-index: 1000;
   padding: 8px 16px;
   box-sizing: border-box;
-  text-align: center; /* Center all header content */
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -46,15 +43,12 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
 }
 
 .logo a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .nav-logo {
@@ -65,12 +59,13 @@ nav {
 .nav-logo-text {
   color: var(--text-color);
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: .8em;
   transition: color 0.3s;
 }
-
-.nav-logo-text:hover {
-  color: var(--highlight-color);
+@media (hover: hover) {
+  .nav-logo-text:hover {
+    color: var(--highlight-color);
+  }
 }
 
 .nav-menu {
@@ -79,7 +74,6 @@ nav {
   padding: 0;
   margin: 0;
   align-items: center;
-  justify-content: center;
 }
 
 .nav-menu li {
@@ -90,7 +84,7 @@ nav {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
   transition: color 0.3s;
 }
 
@@ -109,27 +103,32 @@ nav {
   transform: scale(1.1);
 }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 4px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
 @media (max-width: 768px) {
   .nav-menu {
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--header-background-color);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none; /* Hide the menu by default */
-  }
-
-  .nav-menu.active {
-    display: flex; /* Show the menu when active */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav-menu li {
-    margin: 8px 0;
-    text-align: center;
-    padding: 8px 0;
+    margin: 4px 8px;
+  }
+
+  .nav-menu li a {
+    font-size: 0.8em;
   }
 
   .nav-icon {
@@ -138,24 +137,27 @@ nav {
   }
 
   .menu-toggle {
-    display: block;
-    cursor: pointer;
+    display: flex;
   }
 }
 
 @media (max-width: 480px) {
+  .nav-menu li a {
+    font-size: 0.7em;
+  }
+
   .nav-icon {
     width: 24px;
     height: 24px;
   }
 }
 
-/* Hero Section */
 .hero-section {
   text-align: center;
   padding: 80px 16px;
   color: var(--text-color);
   background-size: cover;
+  margin-top: 60px; /* Adjust this value to match the height of the header */
 }
 
 .hero-content {
@@ -174,7 +176,6 @@ nav {
   margin-bottom: 32px;
 }
 
-/* Button Styles */
 .button,
 .email-button {
   display: inline-block;
@@ -402,27 +403,35 @@ footer {
   }
 }
 
-/* Video Section */
 .video-section {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--header-background-color);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .video-container {
   position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background-color: #000;
+  border-radius: 12px;
   overflow: hidden;
-  padding-top: 125%; /* 4:3 Aspect Ratio */
 }
 
-.video-container video {
+.video-container .video-gif {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
+  border-radius: 12px;
   object-fit: cover;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
