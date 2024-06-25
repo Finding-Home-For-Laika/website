@@ -31,12 +31,14 @@ header {
   z-index: 1000;
   padding: 8px 16px;
   box-sizing: border-box;
+  text-align: center; /* Center all header content */
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -44,18 +46,20 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .logo a {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-logo {
   max-width: 40px;
   margin-right: 10px;
-  border-radius: 100%;
 }
 
 .nav-logo-text {
@@ -75,27 +79,23 @@ nav {
   padding: 0;
   margin: 0;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-menu li {
   margin: 0 16px;
-  padding: 8px 16px;
 }
 
 .nav-menu li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
   transition: color 0.3s;
 }
 
 .nav-menu li a:hover {
   color: var(--highlight-color);
-}
-
-.nav-menu li a[href*="donate"] {
-  color: #fff;
 }
 
 .nav-icon {
@@ -105,10 +105,41 @@ nav {
   transition: transform 0.2s;
 }
 
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--header-background-color);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide the menu by default */
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .nav-menu li {
+    margin: 8px 0;
+    text-align: center;
+    padding: 8px 0;
+  }
+
   .nav-icon {
     width: 28px;
     height: 28px;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
   }
 }
 
@@ -119,79 +150,10 @@ nav {
   }
 }
 
-.nav-icon:hover {
-  transform: scale(1.1);
-}
-
-/* Add these styles for the nav toggle */
-.nav-toggle-label {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.nav-toggle-label span {
-  height: 3.3px;
-  width: 27.5px;
-  background-color: var(--text-color);
-  margin: 3px 0;
-  transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--header-background-color);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu li {
-    margin: 8px 0;
-    text-align: center;
-    padding: 8px 0;
-  }
-
-  .nav-toggle-label {
-    display: flex;
-  }
-
-  .nav-toggle-label.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .nav-toggle-label.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle-label.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-}
-
-@media (min-width: 769px) {
-  .nav-menu {
-    display: flex !important;
-  }
-
-  .nav-toggle-label {
-    display: none !important;
-  }
-}
-
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 80px 16px; /* Reduced padding to make the section less tall */
+  padding: 80px 16px;
   color: var(--text-color);
   background-size: cover;
 }
@@ -449,11 +411,13 @@ footer {
   padding: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .video-container {
   position: relative;
   overflow: hidden;
   padding-top: 125%; /* 4:3 Aspect Ratio */
 }
+
 .video-container video {
   position: absolute;
   top: 0;
