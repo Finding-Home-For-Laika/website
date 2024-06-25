@@ -222,7 +222,8 @@ nav {
 .about-section,
 .contact-section,
 .donate-section,
-.dogs-section {
+.dogs-section,
+.video-section {
   text-align: center;
   padding: 140px 16px;
   background: var(--header-background-color);
@@ -404,21 +405,20 @@ footer {
 }
 
 .video-section {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
+  text-align: center;
+  padding: 140px 16px;
+  background: var(--header-background-color);
+}
+
+.video-content {
+  max-width: 600px;
   margin: 0 auto;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: var(--header-background-color);
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .video-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 125%;
   background-color: #000;
   border-radius: 12px;
   overflow: hidden;
