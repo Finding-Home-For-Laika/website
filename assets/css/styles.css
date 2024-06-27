@@ -41,31 +41,27 @@ nav {
 
 .logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.logo a {
+.logo a,
+.nav-logo-text,
+.nav-menu li a {
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .nav-logo {
   max-width: 40px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .nav-logo-text {
-  color: var(--text-color);
   font-weight: bold;
   font-size: 0.8em;
-  transition: color 0.3s;
-}
-
-@media (hover: hover) {
-  .nav-logo-text:hover {
-    color: var(--highlight-color);
-  }
+  text-align: center;
 }
 
 .nav-menu {
@@ -81,15 +77,15 @@ nav {
 }
 
 .nav-menu li a {
-  text-decoration: none;
-  color: var(--text-color);
   font-weight: bold;
   font-size: 1em;
-  transition: color 0.3s;
 }
 
-.nav-menu li a:hover {
-  color: var(--highlight-color);
+@media (hover: hover) {
+  .nav-logo-text:hover,
+  .nav-menu li a:hover {
+    color: var(--highlight-color);
+  }
 }
 
 .nav-icon {
@@ -174,6 +170,9 @@ nav {
 .hero-section p {
   font-size: 1.75em;
   margin-bottom: 32px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #4a4a4a;
 }
 
 .button,
@@ -195,20 +194,14 @@ nav {
   background-color: var(--primary-color);
 }
 
-.button:hover {
-  background-color: var(--primary-color);
+.button:hover,
+.email-button:hover {
   filter: brightness(90%);
   transform: scale(1.05);
 }
 
 .email-button {
   background-color: var(--secondary-color);
-}
-
-.email-button:hover {
-  background-color: var(--secondary-color);
-  filter: brightness(90%);
-  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -219,35 +212,43 @@ nav {
   }
 }
 
-.section {
+.about-section,
+.contact-section,
+.donate-section,
+.dogs-section,
+.video-section {
   text-align: center;
   padding: 140px 16px;
   background: var(--header-background-color);
 }
 
-.section.dark {
+.mission-vision-section,
+.vision-section,
+.mission-section {
+  text-align: center;
+  padding: 140px 16px;
   background: var(--background-color);
-}
-
-.section-content {
-  padding: 40px;
-  display: inline-block;
-}
-
-.section-content h2,
-.section-content h3 {
   color: var(--text-color);
-  font-family: 'Rock Salt', cursive;
+  background-size: cover;
 }
 
-.section-content h2 {
-  font-size: 2.6em;
-  margin-bottom: 24px;
+.contact-section {
+  background-size: contain;
 }
 
-.section-content h3 {
-  font-size: 1.2em;
-  margin-bottom: 12px;
+.donate-section,
+.about-section {
+  background-size: cover;
+  padding-bottom: 320px;
+}
+
+
+.donate-section {
+  background: url('../images/backgrounds/donate-background.png') no-repeat center bottom;
+}
+
+.about-section {
+  background: url('../images/backgrounds/about-background.png') no-repeat center bottom;
 }
 
 .dog-images {
@@ -278,12 +279,6 @@ nav {
   margin-bottom: 16px;
 }
 
-@media (min-width: 769px) {
-  .dog-card img {
-    max-width: 100%;
-  }
-}
-
 .dog-card h2 {
   font-family: 'Rock Salt', cursive;
   font-size: 2em;
@@ -298,6 +293,7 @@ nav {
   text-align: left;
   list-style-type: disc;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 .contact-info {
@@ -309,6 +305,9 @@ nav {
 
 .contact-info p {
   margin: 0.5em 0;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #4a4a4a;
 }
 
 .contact-info a {
@@ -320,6 +319,27 @@ nav {
   text-decoration: underline;
 }
 
+.section-content {
+  padding: 40px;
+  display: inline-block;
+}
+
+.section-content h2,
+.section-content h3 {
+  font-family: 'Rock Salt', cursive;
+  color: var(--text-color);
+}
+
+.section-content h2 {
+  font-size: 2.6em;
+  margin-bottom: 24px;
+}
+
+.section-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+}
+
 footer {
   background-color: var(--header-background-color);
   padding: 32px;
@@ -329,7 +349,6 @@ footer {
 }
 
 .ribbon {
-  background: url('../images/backgrounds/ribbon-1.png') no-repeat center bottom;
   background-size: cover;
   height: 200px;
   width: 100%;
@@ -355,6 +374,11 @@ footer {
   .dog-images {
     flex-direction: column;
     align-items: center;
+  }
+
+  .dog-card:nth-child(odd),
+  .dog-card:nth-child(even) {
+    top: 0;
   }
 
   .nav-logo {
