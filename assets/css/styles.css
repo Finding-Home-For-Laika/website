@@ -419,10 +419,13 @@ footer {
 .video-container {
   position: relative;
   width: 100%;
-  padding-top: 125%;
-  background-color: #000;
+  max-width: 600px;
+  max-height: 600px;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  /* background-color: #000; */
   border-radius: 12px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .video-container .video-gif {
@@ -433,13 +436,14 @@ footer {
   height: 100%;
   border: 0;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: contain; /* Maintains aspect ratio and scales the video */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 @media (min-width: 769px) {
   .video-container {
     max-width: 600px;
-    margin: 0 auto;
+    max-height: 400px; /* Set a maximum height for wider screens */
+    padding-top: 66.67%; /* Adjust aspect ratio if needed */
   }
 }
