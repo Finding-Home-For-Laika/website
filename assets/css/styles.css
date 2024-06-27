@@ -1,4 +1,3 @@
-/* Updated CSS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap');
 
 :root {
@@ -59,9 +58,10 @@ nav {
 .nav-logo-text {
   color: var(--text-color);
   font-weight: bold;
-  font-size: .8em;
+  font-size: 0.8em;
   transition: color 0.3s;
 }
+
 @media (hover: hover) {
   .nav-logo-text:hover {
     color: var(--highlight-color);
@@ -157,7 +157,7 @@ nav {
   padding: 80px 16px;
   color: var(--text-color);
   background-size: cover;
-  margin-top: 60px; /* Adjust this value to match the height of the header */
+  margin-top: 60px;
 }
 
 .hero-content {
@@ -219,41 +219,35 @@ nav {
   }
 }
 
-.about-section,
-.contact-section,
-.donate-section,
-.dogs-section,
-.video-section {
+.section {
   text-align: center;
   padding: 140px 16px;
   background: var(--header-background-color);
 }
 
-.mission-vision-section,
-.vision-section,
-.mission-section {
-  text-align: center;
-  padding: 140px 16px;
+.section.dark {
   background: var(--background-color);
+}
+
+.section-content {
+  padding: 40px;
+  display: inline-block;
+}
+
+.section-content h2,
+.section-content h3 {
   color: var(--text-color);
-  font-family: 'Roboto', Arial, sans-serif;
-  background-size: cover;
+  font-family: 'Rock Salt', cursive;
 }
 
-.contact-section {
-  background-size: contain;
+.section-content h2 {
+  font-size: 2.6em;
+  margin-bottom: 24px;
 }
 
-.donate-section {
-  background: url('../images/backgrounds/donate-background.png') no-repeat center bottom;
-  background-size: cover;
-  padding-bottom: 320px;
-}
-
-.about-section {
-  background: url('../images/backgrounds/about-background.png') no-repeat center bottom;
-  background-size: cover;
-  padding-bottom: 320px;
+.section-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px;
 }
 
 .dog-images {
@@ -297,21 +291,13 @@ nav {
   margin-bottom: 16px;
 }
 
-.dog-description {
+.dog-description,
+.dog-summary {
   font-size: 1.2em;
   color: var(--text-color);
   text-align: left;
   list-style-type: disc;
   padding-left: 20px;
-}
-
-.dog-summary {
-  font-size: 1.2em;
-  color: var (--text-color);
-  text-align: left;
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-top: 20px;
 }
 
 .contact-info {
@@ -332,25 +318,6 @@ nav {
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-.section-content {
-  padding: 40px;
-  display: inline-block;
-}
-
-.section-content h2 {
-  font-size: 2.6em;
-  margin-bottom: 24px;
-  color: var(--text-color);
-  font-family: 'Rock Salt', cursive;
-}
-
-.section-content h3 {
-  font-size: 1.2em;
-  margin-bottom: 12px;
-  color: var(--text-color);
-  font-family: 'Rock Salt', cursive;
 }
 
 footer {
@@ -390,11 +357,6 @@ footer {
     align-items: center;
   }
 
-  .dog-card:nth-child(odd),
-  .dog-card:nth-child(even) {
-    top: 0;
-  }
-
   .nav-logo {
     max-height: 40px;
   }
@@ -404,7 +366,6 @@ footer {
   }
 }
 
-/* Updated Video Section CSS */
 .video-section {
   text-align: center;
   padding: 140px 16px;
@@ -420,9 +381,7 @@ footer {
   position: relative;
   width: 100%;
   max-width: 600px;
-  max-height: 600px;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  /* background-color: #000; */
+  padding-top: 56.25%;
   border-radius: 12px;
   overflow: hidden;
   margin: 0 auto;
@@ -436,14 +395,13 @@ footer {
   height: 100%;
   border: 0;
   border-radius: 12px;
-  object-fit: contain; /* Maintains aspect ratio and scales the video */
+  object-fit: contain;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 @media (min-width: 769px) {
   .video-container {
-    max-width: 600px;
-    max-height: 400px; /* Set a maximum height for wider screens */
-    padding-top: 66.67%; /* Adjust aspect ratio if needed */
+    max-height: 400px;
+    padding-top: 66.67%;
   }
 }
