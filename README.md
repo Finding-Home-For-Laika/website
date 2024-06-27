@@ -4,9 +4,7 @@ Website: [https://finding-home-for-laika.github.io/website/](https://finding-hom
 
 "Finding a Home for Laika" is a dedicated platform that helps find loving and permanent homes for dogs. Our mission is to connect dogs with compassionate families, providing all the necessary information and resources to ensure a smooth adoption process.
 
-### Directory Structure for "Finding a Home for Laika" Website
-
-Following best practices, here is the recommended directory structure for your GitHub Pages website:
+## Directory Structure
 
 ```bash
 .
@@ -25,21 +23,16 @@ Following best practices, here is the recommended directory structure for your G
 ├── index.html
 ├── js
 │   └── script.js
-└── pages
-    ├── about.html
-    ├── contact.html
-    ├── dogs.html
-    └── donate.html
+├── pages
+│   ├── about.html
+│   ├── contact.html
+│   ├── dogs.html
+│   └── donate.html
+└── tests
+    └── App.test.js
 
-7 directories, 14 files
+7 directories, 15 files
 ```
-
-# Finding a Home for Laika
-
-## Overview
-"Finding a Home for Laika" is a website dedicated to finding loving homes for dogs. This project leverages GitHub Pages for hosting and GitHub Actions for continuous deployment.
-
-Website: [https://finding-home-for-laika.github.io/website/](https://finding-home-for-laika.github.io/website/)
 
 ## Setup Instructions
 
@@ -49,20 +42,22 @@ Website: [https://finding-home-for-laika.github.io/website/](https://finding-hom
    cd finding-home-for-laika
    ```
 
-2. Install dependencies (if using any build tools):
+2. Install dependencies:
    ```sh
    npm install
    ```
 
-3. Run the development server (if applicable):
+3. Run the development server:
    ```sh
    npm start
    ```
 
-4. Make your changes and push to the `main` branch. GitHub Actions will handle the deployment.
+4. Run the tests:
+   ```sh
+   npm test
+   ```
+
+5. Make your changes and push to the `main` branch. GitHub Actions will handle the deployment.
 
 ## License
 This project is licensed under the MIT License.
-```
-
-This directory structure ensures that your website is well-organized, maintainable, and scalable, following best practices.
