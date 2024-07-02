@@ -1,0 +1,32 @@
+{
+  "name": "finding-home-for-laika",
+  "version": "1.0.0",
+  "description": "Helping senior dogs find loving homes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "author": "Finding a Home for Laika",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-organization/finding-home-for-laika.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-organization/finding-home-for-laika/issues"
+  },
+  "homepage": "https://finding-home-for-laika.github.io/website/"
+}
