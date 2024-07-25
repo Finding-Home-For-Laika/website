@@ -429,3 +429,64 @@ footer {
     padding-top: 66.67%;
   }
 }
+
+/* Slide-specific styles */
+.slide {
+  padding: 50px;
+  text-align: center;
+}
+
+.title-slide, .thank-you-slide {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.content-slide {
+  background-color: #ffffff;
+  color: var(--text-color);
+}
+
+.slide .logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.slide .title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3em;
+  color: var(--primary-color);
+}
+
+.slide .subtitle {
+  font-size: 1.5em;
+  color: var(--secondary-color);
+}
+
+.slide .slide-title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.slide .thank-you-title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.slide .content {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 20px 0;
+}
+
+.slide .social-media img {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+}
