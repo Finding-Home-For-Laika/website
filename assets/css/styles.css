@@ -214,19 +214,16 @@ nav {
 
 .about-section,
 .contact-section,
-.donate-section,
-.dogs-section,
-.video-section {
+.support-section,
+.mission-section,
+.vision-section {
   text-align: center;
   padding: 140px 16px;
   background: var(--header-background-color);
 }
 
-.mission-vision-section,
-.vision-section,
-.mission-section {
-  text-align: center;
-  padding: 140px 16px;
+.mission-section,
+.vision-section {
   background: var(--background-color);
   color: var(--text-color);
   background-size: cover;
@@ -236,87 +233,18 @@ nav {
   background-size: contain;
 }
 
-.donate-section,
+.support-section,
 .about-section {
   background-size: cover;
   padding-bottom: 320px;
 }
 
-
-.donate-section {
-  background: url('../images/backgrounds/donate-background.png') no-repeat center bottom;
+.support-section {
+  background: url('../images/backgrounds/support-background.png') no-repeat center bottom;
 }
 
 .about-section {
   background: url('../images/backgrounds/about-background.png') no-repeat center bottom;
-}
-
-.dog-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-  margin-top: -110px;
-}
-
-.dog-card {
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.dog-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dog-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 16px;
-}
-
-.dog-card h2 {
-  font-family: 'Rock Salt', cursive;
-  font-size: 2em;
-  color: var(--text-color);
-  margin-bottom: 16px;
-}
-
-.dog-description,
-.dog-summary {
-  font-size: 1.2em;
-  color: var(--text-color);
-  text-align: left;
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-top: 20px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px;
-}
-
-.contact-info p {
-  margin: 0.5em 0;
-  line-height: 1.8;
-  font-weight: 300;
-  color: #4a4a4a;
-}
-
-.contact-info a {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
 }
 
 .section-content {
@@ -340,6 +268,10 @@ nav {
   margin-bottom: 12px;
 }
 
+.section-content p {
+  margin-bottom: 20px;
+}
+
 footer {
   background-color: var(--header-background-color);
   padding: 32px;
@@ -348,13 +280,30 @@ footer {
   position: relative;
 }
 
-.ribbon {
-  background-size: cover;
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.legal-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.legal-info h3 {
+  font-family: 'Rock Salt', cursive;
+  color: var(--text-color);
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.legal-info p {
+  margin-bottom: 15px;
+}
+
+.legal-info a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.legal-info a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -371,122 +320,15 @@ footer {
     box-sizing: border-box;
   }
 
-  .dog-images {
-    flex-direction: column;
-    align-items: center;
+  .section-content {
+    padding: 20px;
   }
 
-  .dog-card:nth-child(odd),
-  .dog-card:nth-child(even) {
-    top: 0;
+  .section-content h2 {
+    font-size: 2em;
   }
 
-  .nav-logo {
-    max-height: 40px;
+  .legal-info {
+    padding: 0 20px;
   }
-
-  .ribbon {
-    height: 100px;
-  }
-}
-
-.video-section {
-  text-align: center;
-  padding: 140px 16px;
-  background: var(--header-background-color);
-}
-
-.video-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.video-container .video-gif {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-  object-fit: contain;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-@media (min-width: 769px) {
-  .video-container {
-    max-height: 400px;
-    padding-top: 66.67%;
-  }
-}
-
-/* Slide-specific styles */
-.slide {
-  padding: 50px;
-  text-align: center;
-}
-
-.title-slide, .thank-you-slide {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.content-slide {
-  background-color: #ffffff;
-  color: var(--text-color);
-}
-
-.slide .logo {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.slide .title {
-  font-family: 'Rock Salt', cursive;
-  font-size: 3em;
-  color: var(--primary-color);
-}
-
-.slide .subtitle {
-  font-size: 1.5em;
-  color: var(--secondary-color);
-}
-
-.slide .slide-title {
-  font-family: 'Rock Salt', cursive;
-  font-size: 2.5em;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.slide .thank-you-title {
-  font-family: 'Rock Salt', cursive;
-  font-size: 3em;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.slide .content {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: var(--text-color);
-  margin: 20px 0;
-}
-
-.slide .social-media img {
-  width: 32px;
-  height: 32px;
-  margin: 0 10px;
 }
