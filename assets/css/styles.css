@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap");
 
 :root {
   --primary-color: #ff6347;
@@ -14,7 +14,7 @@
 
 /* Global Styles */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -24,8 +24,10 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
-  font-family: 'Rock Salt', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Rock Salt", cursive;
   color: var(--text-color);
 }
 
@@ -58,32 +60,30 @@ nav {
 
 .logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.logo a,
-.nav-menu li a {
+.logo a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--nav-text-color);
-  transition: color 0.3s, transform 0.3s;
-}
-
-.nav-logo-text {
-  text-decoration: none;
-  color: var(--nav-text-color);
-  transition: color 0.3s, transform 0.3s;
 }
 
 .nav-logo {
-  max-width: 40px;
-  margin-bottom: 10px;
+  max-width: 50px;
+  margin-right: 10px;
 }
 
 .nav-logo-text {
   font-weight: bold;
-  font-size: 0.9em;
-  text-align: center;
+  font-size: 1.2em;
+  color: var(--nav-text-color);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-logo-text:hover {
+  color: var(--nav-hover-color);
+  transform: scale(1.05);
 }
 
 .nav-menu {
@@ -99,16 +99,18 @@ nav {
 }
 
 .nav-menu li a {
+  text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
+  color: var(--nav-text-color);
   padding: 5px 10px;
   border-radius: 5px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-.nav-menu li a:hover,
-.nav-logo-text:hover {
-  color: var(--nav-hover-color);
-  transform: scale(1.05);
+.nav-menu li a:hover {
+  color: #fff;
+  background-color: var(--nav-hover-color);
 }
 
 .nav-icon {
@@ -120,6 +122,52 @@ nav {
 
 .nav-icon:hover {
   transform: scale(1.1);
+}
+
+/* Menu Toggle (Hamburger Icon) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 21px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background-color: var(--nav-text-color);
+  border-radius: 3px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--header-background-color);
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.active li {
+  margin: 16px 0;
+  text-align: center;
 }
 
 /* Buttons */
@@ -159,7 +207,10 @@ nav {
 .dogs-section,
 .video-section,
 .mission-section,
-.vision-section {
+.vision-section,
+.happy-tail-section,
+.success-stories-section,
+.pet-sitting-section {
   text-align: center;
   padding: 140px 16px;
 }
@@ -188,11 +239,13 @@ nav {
 }
 
 .donate-section {
-  background: url('../images/backgrounds/donate-background.png') no-repeat center bottom;
+  background: url("../images/backgrounds/donate-background.png") no-repeat
+    center bottom;
 }
 
 .about-section {
-  background: url('../images/backgrounds/about-background.png') no-repeat center bottom;
+  background: url("../images/backgrounds/about-background.png") no-repeat center
+    bottom;
 }
 
 /* Hero Section */
@@ -298,120 +351,42 @@ footer {
   left: 0;
 }
 
-/* Video Section */
-.video-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.video-container .video-gif {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-  object-fit: contain;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-/* Slide Styles */
-.slide {
-  padding: 50px;
-  text-align: center;
-}
-
-.title-slide,
-.thank-you-slide {
-  background-color: var(--background-color);
-}
-
-.content-slide {
-  background-color: #ffffff;
-}
-
-.slide .logo {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.slide .title {
-  font-size: 3em;
-  color: var(--primary-color);
-}
-
-.slide .subtitle {
-  font-size: 1.5em;
-  color: var(--secondary-color);
-}
-
-.slide .slide-title {
-  font-size: 2.5em;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.slide .thank-you-title {
-  font-size: 3em;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.slide .content {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin: 20px 0;
-}
-
-.slide .social-media img {
-  width: 32px;
-  height: 32px;
-  margin: 0 10px;
-}
-
 /* Media Queries */
-@media (max-width: 768px) {
-  .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
+@media (max-width: 992px) {
+  /* Adjust nav menu items for tablet */
   .nav-menu li {
-    margin: 4px 8px;
+    margin: 0 12px;
   }
 
   .nav-menu li a {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
+}
 
-  .nav-icon {
-    width: 28px;
-    height: 28px;
+@media (max-width: 768px) {
+  /* Hide the nav menu and show the menu toggle */
+  .nav-menu {
+    display: none;
   }
 
   .menu-toggle {
     display: flex;
   }
 
-  .button,
-  .email-button {
-    width: 100%;
-    box-sizing: border-box;
+  nav {
+    position: relative;
   }
 
+  /* Adjust logo */
+  .nav-logo {
+    max-width: 40px;
+  }
+
+  .nav-logo-text {
+    font-size: 1em;
+  }
+
+  /* Adjust hero section */
   .hero-section h1 {
     font-size: 2.5em;
   }
@@ -420,32 +395,33 @@ footer {
     font-size: 1.25em;
   }
 
+  /* Adjust dog images */
   .dog-images {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
 
-  .dog-card:nth-child(odd),
-  .dog-card:nth-child(even) {
-    top: 0;
+  .dog-card {
+    margin-bottom: 32px;
   }
 
-  .nav-logo {
-    max-height: 40px;
-  }
-
-  .ribbon {
-    height: 100px;
-  }
-
-  .nav-logo-text {
-    text-decoration: none;
+  /* Buttons */
+  .button,
+  .email-button {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 480px) {
+  /* Adjust nav menu items for mobile */
+  .nav-menu.active li {
+    margin: 12px 0;
+  }
+
   .nav-menu li a {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .nav-icon {
@@ -454,7 +430,7 @@ footer {
   }
 
   .nav-logo-text {
-    text-decoration: none;
+    font-size: 0.9em;
   }
 }
 
@@ -463,8 +439,46 @@ footer {
     max-height: 400px;
     padding-top: 66.67%;
   }
+}
 
-  .nav-logo-text {
-    text-decoration: none;
-  }
+/* Additional Styles for New Sections */
+.success-stories-section article {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.success-stories-section .read-more {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.success-stories-section .read-more:hover {
+  text-decoration: underline;
+}
+
+.pet-sitting-section h2,
+.pet-sitting-section h3 {
+  margin-top: 24px;
+}
+
+.pet-sitting-section .contact-info {
+  align-items: center;
+}
+
+.pet-sitting-section .contact-info p {
+  font-size: 1.2em;
+}
+
+.pet-sitting-section .contact-info a {
+  font-size: 1.2em;
+}
+
+/* Smooth Transition for Nav Menu */
+.nav-menu,
+.menu-toggle {
+  transition: all 0.3s ease-in-out;
 }
