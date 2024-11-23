@@ -482,3 +482,16 @@ footer {
 .menu-toggle {
   transition: all 0.3s ease-in-out;
 }
+
+/* Styles for unordered lists */
+ul {
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
